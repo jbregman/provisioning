@@ -18,6 +18,15 @@ consumes:
 produces:
   - application/json
 paths:
+  /provisioning:
+    x-swagger-router-controller: provision
+    post:
+       description: Provision site in CyGlass
+       operationId: createSite
+       parameters:
+         - name: body
+           in: body
+           
   /hello:
     # binds a127 app logic to a route
     x-swagger-router-controller: hello_world
